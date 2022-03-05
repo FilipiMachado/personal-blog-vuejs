@@ -5,23 +5,23 @@
         <router-link class="header" :to="{ name: 'Home' }">Personal Blog</router-link>
       </div>
       <div class="nav-links">
-        <ul>
-          <router-links class="link" to="#">Home</router-links>
-          <router-links class="link" to="#">Posts</router-links>
-          <router-links class="link" to="#">Create Post</router-links>
-          <router-links class="link" to="#">Login/Register</router-links>
+        <ul v-show="!mobile">
+          <router-link class="link" to="#">Home</router-link>
+          <router-link class="link" to="#">Posts</router-link>
+          <router-link class="link" to="#">Criar Post</router-link>
+          <router-link class="link" to="#">Login / Cadastrar-se</router-link>
         </ul>
       </div>
     </nav>
-    <menuIcon/>
-    <transition name="mobile-nav">
-      <ul>
-          <router-links class="link" to="#">Home</router-links>
-          <router-links class="link" to="#">Posts</router-links>
-          <router-links class="link" to="#">Create Post</router-links>
-          <router-links class="link" to="#">Login/Register</router-links>
+    <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
+    <div class="mobile-nav" name="mobile-nav">
+      <ul v-show="mobileNav">
+          <router-link class="link" to="#">Home</router-link>
+          <router-link class="link" to="#">Posts</router-link>
+          <router-link class="link" to="#">Create Post</router-link>
+          <router-link class="link" to="#">Login/Register</router-link>
         </ul>
-    </transition>
+    </div>
   </header>
 </template>
 
@@ -34,8 +34,31 @@ export default {
     menuIcon
   },
   data() {
-    return {}
+    return {
+      mobile: null,
+      mobileNav: null,
+      windowWidth: null,
+    }
   },
+  created() {
+    window.addEventListener('resize', this.checkScreen)
+    this.checkScreen()
+  },
+  methods: {
+    checkScreen() {
+      this.windowWidth = window.innerWidth
+      if (this.windowWidth <= 750) {
+        this.mobile = true
+        return
+      }
+      this.mobile = false
+      this.mobileNav = false
+      return
+    },
+    toggleMobileNav() {
+      this.mobileNav = !this.mobileNav
+    }
+  }
 };
 </script>
 
@@ -46,9 +69,78 @@ header {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   z-index: 99;
 }
+
 .link {
   font-weight: 500;
   padding: 0 8px;
   transition: .3s color ease;
+}
+
+.link:hover {
+  color: #1eb8b8;
+}
+
+nav {
+  display: flex;
+  padding: 25px 0;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 24px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-links {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-links ul {
+  margin-right: 32px;
+}
+
+.nav-links .link {
+  margin-right: 32px;
+}
+
+.nav-links:last-child {
+  margin-right: 0;
+}
+
+.menu-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 32px;
+  right: 25px;
+  height: 25px;
+  width: auto;
+}
+
+.mobile-nav ul {
+  padding: 20px;
+  width: 70%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100%;
+  background-color: #303030;
+  top: 0;
+  left: 0;
+}
+
+.mobile-nav .link {
+  padding: 15px 0;
+  color: #fff; 
 }
 </style>
