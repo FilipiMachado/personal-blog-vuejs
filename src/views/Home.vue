@@ -30,7 +30,7 @@ export default {
         },
         {
           title: 'This is a filler Title!2',
-          blogHTML: 'This is a filler blog post title!',
+          blogHTML: 'This is a filler blog post title!2',
           blogCoverPhoto: 'designed-for-everyone'
         },
       ]
