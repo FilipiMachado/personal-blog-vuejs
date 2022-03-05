@@ -58,6 +58,12 @@ export default {
 </script>
 
 <style scoped>
+footer {
+  margin-top: auto;
+  padding: 100px 25px;
+  background-color: #303030;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -78,6 +84,7 @@ export default {
 }
 
 .header {
+  text-align: center;
   font-size: 24px;
   color: #fff;
   text-decoration: none;
@@ -173,6 +180,10 @@ p {
 .right {
   align-items: flex-end;
   gap: 0;
+}
+
+.header {
+  text-align: initial;
 }
 }
 </style>
