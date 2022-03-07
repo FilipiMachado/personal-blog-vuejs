@@ -66,9 +66,31 @@ export default {
   background-color: #f1f1f1;
 }
 
+.blog-cards {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+}
+
 @media (min-width: 500px) {
   .blog-card-wrap {
     padding: 100px 16px;
+  }
+
+  .blog-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .blog-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .blog-cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 </style>
