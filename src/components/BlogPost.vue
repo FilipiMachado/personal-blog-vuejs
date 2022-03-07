@@ -7,7 +7,7 @@
         <p v-if="post.welcomeScreen">{{ post.blogPost }}</p>
         <p class="content-preview" v-else>{{ post.blogHTML }}</p>
         <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
-          Login / Cadastrar-se<Arrow class="arrow arrow-light" />
+          Login / Cadastrar-se<Arrow class="arrow arrow-light2" />
         </router-link>
         <router-link class="link" v-else to="#">
           Veja o Post<Arrow class="arrow arrow-light" />
@@ -128,6 +128,10 @@ export default {
 
 .arrow-light path {
   fill: #000;
+}
+
+.arrow-light2 path {
+  fill: #fff;
 }
 
 .no-user:first-child .blog-content{

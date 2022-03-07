@@ -59,4 +59,16 @@ export default {
 .link-light {
   color: #fff;
 }
+
+.blog-card-wrap {
+  position: relative;
+  padding: 80px 16px;
+  background-color: #f1f1f1;
+}
+
+@media (min-width: 500px) {
+  .blog-card-wrap {
+    padding: 100px 16px;
+  }
+}
 </style>
