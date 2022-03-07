@@ -60,6 +60,69 @@ export default {
   color: #fff;
 }
 
+.arrow {
+  margin-left: 8px;
+  width: 12px;
+}
+
+.arrow path {
+  fill: #000;
+}
+
+.arrow-light path {
+  fill: #fff;
+}
+
+button,
+.router-button {
+  transition: 500ms ease all;
+  cursor: pointer;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background-color: #303030;
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+}
+
+button:focus {
+  outline: none;
+}
+.router-button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: rgba(48, 48, 48, 0.7);
+}
+
+.router-button:hover {
+  background-color: rgba(48, 48, 48, 0.7);
+}
+
+.button-ghost {
+  color: #000;
+  padding: 0;
+  border-radius: 0;
+  margin-top: 50px;
+  font-size: 15px;
+  font-weight: 500;
+  background-color: transparent;
+}
+
+.button-light {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.button-inactive {
+  pointer-events: none;
+  cursor: none !important;
+  background-color: rgba(128, 128, 128, 0.5) !important;
+}
+
 .blog-card-wrap {
   position: relative;
   padding: 80px 16px;
@@ -79,6 +142,16 @@ export default {
 
   .blog-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 700px) {
+  .button-ghost {
+    margin-top: 0;
+    margin-left: auto;
+  }
+  .button-ghost i {
+    margin-left: 8px;
   }
 }
 
