@@ -42,11 +42,11 @@ const routes = [
     }
   },
   {
-    path: '/forgotpassword',
+    path: '/forgot-password',
     name: 'ForgotPassword',
     component: ForgotPassword,
     meta: {
-      title: 'ForgotPassword'
+      title: 'Forgot Password'
     }
   },
 ]
