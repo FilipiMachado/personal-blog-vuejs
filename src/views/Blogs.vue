@@ -24,7 +24,18 @@ export default {
   computed: {
     sampleBlogCards() {
       return this.$store.state.sampleBlogCards
+    },
+    editPost: {
+      get() {
+        return this.$store.state.editPost
+      },
+      set(payload) {
+        this.$store.commit("toggleEditPost", payload)
+      }
     }
+  },
+  beforeDestroy() {
+    this.$store.commit("toggleEditPost", false)
   }
 };
 </script>
@@ -32,6 +43,18 @@ export default {
 <style scoped>
 .blog-cards {
   position: relative;
+}
+
+.toggle-edit {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -70px;
+  right: 0;
+}
+
+.toggle-edit span {
+  margin-right: 16px;
 }
 
 input[type="checkbox"] {
