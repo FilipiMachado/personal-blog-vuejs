@@ -98,10 +98,12 @@ export default {
         });
         this.$router.push({ name: 'Home' })
         return;
+      } else {
+        this.error = true
+        this.errorMsg = 'Por favor preencha todos os campos!'
+        return;
       }
-      this.error = true
-      this.erroMsg = 'Por favor preencha todos os campos!'
-      return;
+      
     }
   }
 };
