@@ -55,7 +55,6 @@ import user from "../assets/Icons/user-alt-light.svg"
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'
-import 'firebase/auth'
 import db from "../firebase/firebaseInit"
 
 export default {
