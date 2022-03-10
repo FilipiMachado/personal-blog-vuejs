@@ -26,7 +26,7 @@
                    :to="{ name: 'ForgotPassword' }">
         Esqueceu a senha?
       </router-link>
-      <button>Login</button>
+      <button class="login-btn">Login</button>
       <div class="angle"></div>
     </form>
     <div class="background"></div>
@@ -65,6 +65,7 @@ export default {
 
 .login-register {
   margin-bottom: 32px;
+  margin: 0 auto;
 }
 
 .router-link {
@@ -88,11 +89,35 @@ export default {
 }
 
 .inputs {
-  
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .input {
-  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  background-color: #f2f7f6;
+  padding: 4px 4px 4px 30px;
+  height: 50px;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.icon {
+  width: 12px;
+  position: absolute;
+  left: 6px;
 }
 
 .forgot-password {
@@ -103,21 +128,55 @@ export default {
   margin: 16px 0 32px;
   border-bottom: 1px solid transparent;
   transition: 0.5s ease all;
+  margin: 0 auto;
 }
 
 .forgot-password:hover {
   border-color: #303030;
 }
 
+.login-btn {
+  margin: 20px auto;
+}
+
+.angle {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  transform: rotateZ(3deg);
+  width: 60px;
+  right: -30px;
+  height: 101%;
+}
+
+.background {
+  display: none;
+  flex: 2;
+  background-size: cover;
+  background-image: url("../assets/background.png");
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 900px) {
   .form-wrap {
     width: 100%;
   }
+
   .form-wrap form {
     padding: 0 50px;
   }
+
   .form-wrap form h2 {
     font-size: 40px;
+  }
+
+  .angle {
+    display: initial;
+  }
+
+  .background {
+    display: initial;
   }
 }
 </style>
