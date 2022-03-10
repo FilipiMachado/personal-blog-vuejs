@@ -1,7 +1,5 @@
-// Import the functions you need from the SDKs
-import { initializeApp } from "firebase/app";
-//import { getAnalytics } from "firebase/analytics";
-import 'firebase/firestore'
+import firebase from "firebase/app";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD2vzTfoTdFxX6riu792mqbTEAu1NBPu1c",
@@ -14,4 +12,9 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig)
+const timestamp = firebase.firestore.FieldValue.serverTimestamp
+
+export { timestamp }
+
+export default app.firestore()
