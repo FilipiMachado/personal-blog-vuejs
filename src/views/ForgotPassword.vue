@@ -23,9 +23,8 @@
 </template>
 
 <script>
-/* Icons */
 import email from "../assets/Icons/envelope-regular.svg"
-/* Components */
+
 import Modal from "../components/Modal.vue"
 import Loading from "../components/Loading.vue"
 

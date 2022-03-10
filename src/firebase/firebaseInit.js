@@ -1,10 +1,10 @@
-// Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+//import { getAnalytics } from "firebase/analytics";
 import 'firebase/firestore'
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
+  apiKey: "AIzaSyD2vzTfoTdFxX6riu792mqbTEAu1NBPu1c",
   authDomain: "personal-blog-1b16f.firebaseapp.com",
   projectId: "personal-blog-1b16f",
   storageBucket: "personal-blog-1b16f.appspot.com",
@@ -14,5 +14,4 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+initializeApp(firebaseConfig);
