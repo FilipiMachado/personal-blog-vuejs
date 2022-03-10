@@ -22,7 +22,7 @@
         <div class="col-2">
           <ul>
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
-            <router-link class="link" :to="{ name: 'Posts' }">Posts</router-link>
+            <router-link class="link" :to="{ name: 'Blogs' }">Posts</router-link>
             <router-link v-if="user" class="link" to="#">Criar Post</router-link>
             <router-link v-if="!user" class="link" :to="{ name: 'Login' }">
               Login / Cadastrar-se

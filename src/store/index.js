@@ -12,6 +12,13 @@ export default new Vuex.Store({
       { blogTitle: 'Blog Card #4', blogCoverPhoto: 'stock-4', blogDate: '8, Março, 2022' },
     ],
     editPost: null,
+    user: null,
+    profileEmail: null,
+    profileFirstName: null,
+    profileLastName: null,
+    profileUsername: null,
+    profileId: null,
+    profileInitials: null,
   },
   mutations: {
     toggleEditPost(state, payload) {
