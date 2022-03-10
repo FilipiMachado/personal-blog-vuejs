@@ -11,19 +11,19 @@
       <div class="inputs">
         <div class="input">
           <input type="text" 
-                 placeholder="First Name" 
+                 placeholder="Nome" 
                  v-model="firstName">
           <user class="icon"/>
         </div>
         <div class="input">
           <input type="text" 
-                 placeholder="Last Name" 
+                 placeholder="Sobrenome" 
                  v-model="lastName">
           <user class="icon"/>
         </div>
         <div class="input">
           <input type="text" 
-                 placeholder="Username" 
+                 placeholder="Usuário" 
                  v-model="username">
           <user class="icon"/>
         </div>
@@ -35,7 +35,7 @@
         </div>
         <div class="input">
           <input type="password" 
-                 placeholder="Password" 
+                 placeholder="Senha" 
                  v-model="password">
           <password class="icon"/>
         </div>

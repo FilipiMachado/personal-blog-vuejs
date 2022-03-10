@@ -17,7 +17,7 @@
         </div>
         <div class="input">
           <input type="password" 
-                 placeholder="Password" 
+                 placeholder="Senha" 
                  v-model="password">
           <password class="icon"/>
         </div>
