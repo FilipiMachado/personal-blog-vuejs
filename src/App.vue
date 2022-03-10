@@ -12,6 +12,9 @@
 import Navigation from "./components/Navigation.vue"
 import Footer from "./components/Footer.vue"
 
+import firebase from "firebase/app"
+import "firebase/auth"
+
 export default {
   name: "App",
   components: {
@@ -25,6 +28,10 @@ export default {
   },
   created() {
     this.checkRoute()
+    setTimeout(() => {
+      console.log(firebase.auth().currentUser.uid)
+    }, 2000);
+    console.log(firebase.auth().currentUser.uid)
   },
   mounted() {},
   methods: {
