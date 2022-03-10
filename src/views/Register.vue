@@ -7,7 +7,7 @@
           Faça Login
         </router-link>
       </p>
-      <h2>Cadastre-se</h2>
+      <h2>Crie sua Conta</h2>
       <div class="inputs">
         <div class="input">
           <input type="text" 
