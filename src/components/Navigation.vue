@@ -24,13 +24,13 @@
             </div>
             <div class="options">
               <div class="option">
-                <router-link class="option" to="#">
+                <router-link class="option" :to="{ name: 'Profile' }">
                   <userIcon class="icon"/>
                   <p class="icon__text">Perfil</p>
                 </router-link>
               </div>
               <div class="option">
-                <router-link class="option" to="#">
+                <router-link class="option" :to="{ name: 'Admin' }">
                   <adminIcon class="icon"/>
                   <p class="icon__text">Admin</p>
                 </router-link>
@@ -49,8 +49,8 @@
       <ul v-show="mobileNav">
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           <router-link class="link" :to="{ name: 'Blogs' }">Posts</router-link>
-          <router-link class="link" to="#">Create Post</router-link>
-          <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Register</router-link>
+          <router-link class="link" to="#">Criar Post</router-link>
+          <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Cadastrar-se</router-link>
         </ul>
     </div>
   </header>
