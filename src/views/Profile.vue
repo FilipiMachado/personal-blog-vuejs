@@ -4,7 +4,7 @@
            :modalMessage="modalMessage"
            v-on:close-modal="closeModal"/>
     <div class="container">
-      <h2>Configurações de Conta</h2>
+      <h2>Configurações da Conta</h2>
       <div class="profile-info">
         <div class="initials">{{ $store.state.profileInitials }}</div>
         <div class="admin-badge">
@@ -49,7 +49,7 @@ export default {
       modalActive: null
     };
   },
-  methods: {
+  methods: { 
     closeModal() {
       this.modalActive = !this.modalActive
     },

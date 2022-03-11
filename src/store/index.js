@@ -59,7 +59,15 @@ export default new Vuex.Store({
       const dbResults = await dataBase.get()
       commit('setProfileInfo', dbResults)
       commit('setProfileInitials')
-      console.log(dbResults)
+    },
+    async updateUserSettings({ commit, state }) {
+      const dataBase = await db.collection('users').doc(state.profileId)
+      await dataBase.update({
+        firstName: state.profileFirstName,
+        lastName: state.profileLastName,
+        username: state.profileUsername
+      })
+      commit('setProfileInitials')
     }
   },
   modules: {
