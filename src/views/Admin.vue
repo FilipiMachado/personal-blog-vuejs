@@ -1,35 +1,37 @@
 <template>
   <div class="admin">
     <div class="container">
-      <h2>Administrador</h2>
-      <div class="input">
-        <input placeholder="Digite seu email e o torne administrador" type="text">
+      <h2>Administration</h2>
+      <div class="admin-info">
+        <h2>Add Admin</h2>
+        <div class="input">
+          <input placeholder="Enter user email to make them an admin" type="text" id="addAdmins" v-model="adminEmail" />
+        </div>
+        <span>{{ this.functionMsg }}</span>
+        <button @click="addAdmin" class="button">Submit</button>
       </div>
-      <span>{{ this.functionMsg }}</span>
-      <button v-on:click="addAdmin" class="button">Enviar</button>
     </div>
   </div>
 </template>
 
 <script>
-import firebase from 'firebase/app'
-import 'firebase/functions'
-
+import firebase from "firebase/app";
+import "firebase/functions";
 export default {
-  name: 'Admin',
+  name: "Admin",
   data() {
     return {
-      adminEmail: '',
-      functionMsg: null
+      adminEmail: "",
+      functionMsg: null,
     };
   },
   methods: {
     async addAdmin() {
-      const addAdmin = await firebase.functions().httpsCallable('addAdminRole')
-      const result = await addAdmin({ email: this.adminEmail })
-      this.functionMsg = result.data.message
-    }
-  }
+      const addAdmin = await firebase.functions().httpsCallable("addAdminRole");
+      const result = await addAdmin({ email: this.adminEmail });
+      this.functionMsg = result.data.message;
+    },
+  },
 };
 </script>
 

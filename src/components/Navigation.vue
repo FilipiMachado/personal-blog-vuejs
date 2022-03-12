@@ -8,7 +8,7 @@
         <ul v-show="!mobile">
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           <router-link class="link" :to="{ name: 'Blogs' }">Posts</router-link>
-          <router-link class="link" to="#">Criar Post</router-link>
+          <router-link v-if="admin" class="link" to="#">Criar Post</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login / Cadastrar-se</router-link>
         </ul>
         <div v-if="user" v-on:click="toggleProfileMenu" class="profile" ref="profile">
@@ -29,7 +29,7 @@
                   <p class="icon__text">Perfil</p>
                 </router-link>
               </div>
-              <div class="option">
+              <div v-if="admin" class="option">
                 <router-link class="option" :to="{ name: 'Admin' }">
                   <adminIcon class="icon"/>
                   <p class="icon__text">Admin</p>
@@ -49,7 +49,7 @@
       <ul v-show="mobileNav">
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           <router-link class="link" :to="{ name: 'Blogs' }">Posts</router-link>
-          <router-link class="link" to="#">Criar Post</router-link>
+          <router-link v-if="admin" class="link" to="#">Criar Post</router-link>
           <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Login/Cadastrar-se</router-link>
         </ul>
     </div>
