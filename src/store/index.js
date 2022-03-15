@@ -10,7 +10,7 @@ export default new Vuex.Store({
   state: {
     blogPosts: [],
     postLoaded: null,
-    blogHTML: "Write your blog title here...",
+    blogHTML: "Escreva o título do Post aqui...",
     blogTitle: "",
     blogPhotoName: "",
     blogPhotoFileURL: null,

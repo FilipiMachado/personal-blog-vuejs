@@ -23,7 +23,7 @@
           <ul>
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
             <router-link class="link" :to="{ name: 'Blogs' }">Posts</router-link>
-            <router-link v-if="admin" class="link" to="#">Criar Post</router-link>
+            <router-link v-if="admin" class="link" :to="{ name: 'CreatePost' }">Criar Post</router-link>
             <router-link v-if="!user" class="link" :to="{ name: 'Login' }">
               Login / Cadastrar-se
             </router-link>
