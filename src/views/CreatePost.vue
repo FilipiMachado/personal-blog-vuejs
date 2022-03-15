@@ -40,7 +40,7 @@ import BlogCoverPreview from "../components/BlogCoverPreview.vue"
 
 import firebase from "firebase/app"
 import "firebase/storage"
-//import db from "../firebase/firebaseInit"
+import db from "../firebase/firebaseInit"
 
 export default {
   name: 'CreatePost',
@@ -107,6 +107,29 @@ export default {
     uploadPost() {
       if (this.blogTitle.length !== 0 && this.blogHTML.length !== 0) {
         if (this.file) {
+          const storageRef = firebase.storage().ref()
+          const docRef = storageRef.child(`documents/BlogCoverPhotos/${this.$store.state.blogPhotoName}`)
+          docRef.put(this.file).on('state_changed', (snapshot) => {
+            console.log(snapshot)
+          }, (error) => {
+            console.log(error)
+          }, async () => {
+            const downloadURL = await docRef.getDownloadURL()
+            const timestamp = await Date.now()
+            const dataBase = await db.collection('blogPosts').doc()
+
+            await dataBase.set({
+              blogID: dataBase.id,
+              blogHTML: this.blogHTML,
+              blogCoverPhoto: downloadURL,
+              blogCoverPhotoName: this.blogCoverPhotoName,
+              blogTitle: this.blogTitle,
+              profileId: this.profileId,
+              date: timestamp,
+            })
+            this.$router.push({ name: 'ViewBlog' })
+          }
+        )
           return
         }
         this.error = true
