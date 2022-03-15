@@ -3,7 +3,7 @@
     <BlogCoverPreview v-show="this.$store.state.blogPhotoPreview"/>
     <div class="container">
       <div :class="{invisible: !error}" class="err-message">
-        <p><span>Erro:</span>{{ this.errorMsg }}</p>
+        <p><span>Erro: </span>{{ this.errorMsg }}</p>
       </div>
       <div class="blog-info">
         <input v-model="blogTitle" type="text" placeholder="Digite o Título">
