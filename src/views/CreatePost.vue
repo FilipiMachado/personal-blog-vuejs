@@ -23,7 +23,7 @@
                     @image-added="imageHandler"/>
       </div>
       <div class="blog-actions">
-        <button>Publicar Post</button>
+        <button @click="uploadPost">Publicar Post</button>
         <router-link class="router-button" :to="{ name: 'BlogPreview' }">Post Preview</router-link>
       </div>
     </div>
@@ -40,6 +40,7 @@ import BlogCoverPreview from "../components/BlogCoverPreview.vue"
 
 import firebase from "firebase/app"
 import "firebase/storage"
+//import db from "../firebase/firebaseInit"
 
 export default {
   name: 'CreatePost',
@@ -102,6 +103,25 @@ export default {
         Editor.insertEmbed(cursorLocation, 'image', downloadURL)
         resetUploader()
       })
+    },
+    uploadPost() {
+      if (this.blogTitle.length !== 0 && this.blogHTML.length !== 0) {
+        if (this.file) {
+          return
+        }
+        this.error = true
+        this.errorMsg = 'Por favor, verifique se você fez upload de uma imagem de fundo!'
+        setTimeout(() => {
+          this.error = false
+        }, 5000);
+        return
+      }
+      this.error = true
+      this.errorMsg = "Por favor, verifique se o título e o campo de texto foram preenchidos!"
+      setTimeout(() => {
+        this.error = false
+      }, 5000);
+      return
     }
   }
 };
