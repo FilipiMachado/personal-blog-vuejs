@@ -1,6 +1,4 @@
-<h2>Search Popular Movies</h2>
-
-Teste: https://pop-movies-project.netlify.app/
+<h2>Personal Blog</h2>
 
 <p align="center">
   <a href="https://imgur.com/57PbV3f"><img src="https://i.imgur.com/57PbV3f.png" title="source: imgur.com" /></a>
@@ -15,17 +13,16 @@ Teste: https://pop-movies-project.netlify.app/
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [React](https://reactjs.org)
-- [Netlify](https://www.netlify.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Vuejs.js](https://vuejs.org/)
+- [Firebase](https://firebase.google.com/)
 
 ## 🚀 Como executar
 
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/FilipiMachado/popular-movies-react
-$ cd popular-movies-react
+$ git clone https://github.com/FilipiMachado/personal-blog-vuejs
+$ cd personal-blog-vuejs
 ```
 
 Para iniciá-lo, siga os passos abaixo:
@@ -38,20 +35,20 @@ $ npm start
 ```
 O app estará disponível no seu browser pelo endereço http://localhost:3000.
 
-Lembrando que será necessário criar uma conta no [Netlify](https://www.netlify.com/) para hospedar seu app.
+Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/) para hospedar seu app.
 
 ## 💻 Projeto
 
-O Search Popular Movies foi desenvolvido por Thomas Weibenfalk, durante o curso completo oferecido pela freeCodeCamp no youtube.                                                                                                           
+Este blog pessoal foi desenvolvido com base em um projeto feito pelo canal do youtube Traversy Media. 
+O projeto contém autenticação feito via firebase e usuário admin.
+
 ## 📝 License
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 <hr>
 
-<h2>Search Popular Movies</h2>
-
-Test: https://pop-movies-project.netlify.app/
+<h2>Personal Blog</h2>
 
 <p align="center">
   <a href="https://imgur.com/57PbV3f"><img src="https://i.imgur.com/57PbV3f.png" title="source: imgur.com" /></a>
@@ -66,17 +63,16 @@ Test: https://pop-movies-project.netlify.app/
 
 This project was developed using this technologies:
 
-- [React](https://reactjs.org)
-- [Netlify](https://www.netlify.com/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Vuejs.js](https://vuejs.org/)
+- [Firebase](https://firebase.google.com/)
 
 ## 🚀 How to Execute
 
 Clone the project and access the folder.
 
 ```bash
-$ git clone https://github.com/FilipiMachado/popular-movies-react
-$ cd popular-movies-react
+$ git clone https://github.com/FilipiMachado/personal-blog-vuejs
+$ cd personal-blog-vuejs
 ```
 
 To start, follow this steps:
