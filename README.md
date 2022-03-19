@@ -13,7 +13,7 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Vuejs.js](https://vuejs.org/)
+- [Vue.js](https://vuejs.org/)
 - [Firebase](https://firebase.google.com/)
 
 ## 🚀 Como executar
@@ -85,11 +85,13 @@ $ npm start
 ```
 The app will be available in this address http://localhost:3000.
 
-Remember, you need a account at [Netlify](https://www.netlify.com/) to host this app.
+Remember, you need a account at [Firebase](https://firebase.google.com/) to host this app.
 
 ## 💻 Project
 
-The Search Popular Movies was developed by Thomas Weibenfalk, during the course offered by freeCodeCamp on Youtube.                                                                                                           
+This personal blog was developed based on a project made by Traversy Media.
+The project contains authentication by firebase and a admin user.
+                                                                                                      
 ## 📝 License
 
 This project is under MIT licensa. Read this file [LICENSE](LICENSE.md) for more details.
