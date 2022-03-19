@@ -55,10 +55,14 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 <h2>Personal Blog</h2>
 
 <p align="center">
-  <a href="https://imgur.com/57PbV3f"><img src="https://i.imgur.com/57PbV3f.png" title="source: imgur.com" /></a>
+  <a href="https://imgur.com/dyAws5H"><img src="https://imgur.com/dyAws5H.png" title="source: imgur.com" /></a>
 </p>
 <h1 align="center">
-    <a href="https://imgur.com/j8XYwDk"><img src="https://i.imgur.com/j8XYwDk.png" title="source: imgur.com" /></a>
+    <a href="https://imgur.com/44PaBH4"><img src="https://imgur.com/44PaBH4.png" title="source: imgur.com" /></a>
+</h1>
+
+<h1 align="center">
+    <a href="https://imgur.com/Gnz3b89"><img src="https://imgur.com/Gnz3b89.png" title="source: imgur.com" /></a>
 </h1>
 
 <br>
